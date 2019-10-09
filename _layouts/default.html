@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>
+      {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} –
+      {{ site.description }}
+    </title>
 
     {% include meta.html %}
 
@@ -9,43 +12,82 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ site.baseurl }}/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{
+        site.baseurl
+      }}/slds-2.10.0/assets/styles/salesforce-lightning-design-system.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="{{ site.name }} - {{ site.description }}"
+      href="{{ site.baseurl }}/feed.xml"
+    />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+    <div class="slds-grid slds-grid_align-center">
+      <div class="slds-size_2-of-3">
+        <div id="header" class="slds-page-header">
+          <div class="slds-page-header__row">
+            <div class="slds-page-header__col-title">
+              <div class="slds-media">
+                <div class="slds-media__figure">
+                  <a href="{{ site.baseurl }}/" class="site-avatar"
+                    ><img src="{{ site.avatar }}"
+                  /></a>
+                </div>
+                <div class="slds-media__body">
+                  <div class="slds-page-header__name">
+                    <div class="slds-page-header__name-title">
+                      <h1>
+                        <span
+                          class="slds-page-header__title slds-truncate"
+                          title="{{ site.name }}"
+                          ><a href="{{ site.baseurl }}/">{{
+                            site.name
+                          }}</a></span
+                        >
+                      </h1>
+                    </div>
+                  </div>
+                  <p class="slds-page-header__name-meta">
+                    {{ site.description }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slds-p-top_large">
+              <span class="slds-p-horizontal_medium"
+                ><a href="{{ site.baseurl }}/">Blog</a></span
+              >
+              <span class="slds-p-horizontal_medium"
+                ><a href="{{ site.baseurl }}/about">About</a></span
+              >
+            </div>
           </div>
+        </div>
+        <div id="main" role="main" class="slds-card slds-m-bottom-xx-large">
+          {{ content }}
+        </div>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+        <div class="slds-docked-form-footer">
+          <footer class="footer">
+            {% include svg-icons.html %}
+          </footer>
+        </div>
+
+        {% include analytics.html %}
       </div>
     </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
   </body>
 </html>

@@ -2,17 +2,18 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<div class="slds-card">
+    {% for post in site.posts %}
+    <article class="slds-tile slds-p-around_medium slds-has-divider_bottom">
+      <h1 class="slds-text-heading_medium">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h1>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
+      <div class="slds-text-heading_small">
         {{ post.excerpt }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
-  {% endfor %}
+    {% endfor %}
 </div>

@@ -2,16 +2,14 @@
 layout: default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
+<article class="slds-card slds-p-around_medium">
+  <div class="slds-text-heading_large">{{ page.title }}</div>
 
-  <div class="entry">
+  <div class="slds-text-heading_small slds-p-vertical_medium">
     {{ content }}
   </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+  <div class="slds-p-top_medium date">Written on {{ page.date | date: "%B %e, %Y" }}</div>
 
   {% include disqus.html %}
 </article>
