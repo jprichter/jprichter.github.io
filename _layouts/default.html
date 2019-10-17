@@ -36,57 +36,46 @@
 
   <body>
     <div class="slds-grid slds-grid_align-center">
-      <div class="slds-size_2-of-3">
-        <div id="header" class="slds-page-header">
-          <div class="slds-page-header__row">
-            <div class="slds-page-header__col-title">
-              <div class="slds-media">
-                <div class="slds-media__figure">
-                  <a href="{{ site.baseurl }}/" class="site-avatar"
-                    ><img src="{{ site.avatar }}"
-                  /></a>
-                </div>
-                <div class="slds-media__body">
-                  <div class="slds-page-header__name">
-                    <div class="slds-page-header__name-title">
-                      <h1>
-                        <span
-                          class="slds-page-header__title slds-truncate"
-                          title="{{ site.name }}"
-                          ><a href="{{ site.baseurl }}/">{{
-                            site.name
-                          }}</a></span
-                        >
-                      </h1>
-                    </div>
-                  </div>
-                  <p class="slds-page-header__name-meta">
-                    {{ site.description }}
-                  </p>
-                </div>
-              </div>
+      <div class="slds-size_1-of-1 slds-medium-size_5-of-6 slds-large-size_2-of-3">
+        <div id="header" class="slds-page-header slds-grid slds-wrap">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <a href="{{ site.baseurl }}/" class="site-avatar"
+                ><img src="{{ site.avatar }}"
+              /></a>
             </div>
-            <div class="slds-p-top_large">
-              <span class="slds-p-horizontal_medium"
-                ><a href="{{ site.baseurl }}/">Blog</a></span
-              >
-              <span class="slds-p-horizontal_medium"
-                ><a href="{{ site.baseurl }}/about">About</a></span
-              >
+          </div>
+          <div class="slds-page-header__name">
+            <div class="slds-page-header__name-title">
+              <h1>
+                <span
+                  class="slds-page-header__title slds-truncate"
+                  title="{{ site.name }}"
+                  ><a href="{{ site.baseurl }}/">{{ site.name }}</a></span
+                >
+              </h1>
+              <p class="slds-page-header__name-meta">
+                {{ site.description }}
+              </p>
             </div>
+          </div>
+          <div class="slds-col_bump-left slds-p-top_large">
+            <span class="slds-p-horizontal_medium"
+              ><a href="{{ site.baseurl }}/">Blog</a></span
+            >
+            <span class="slds-p-horizontal_medium"
+              ><a href="{{ site.baseurl }}/about">About</a></span
+            >
           </div>
         </div>
         <div id="main" role="main" class="slds-card slds-m-bottom-xx-large">
           {{ content }}
         </div>
-
         <div class="slds-docked-form-footer">
           <footer class="footer">
-            {% include svg-icons.html %}
+            {% include svg-icons.html %} {% include analytics.html %}
           </footer>
         </div>
-
-        {% include analytics.html %}
       </div>
     </div>
   </body>
