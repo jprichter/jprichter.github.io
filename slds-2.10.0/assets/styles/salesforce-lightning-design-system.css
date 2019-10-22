@@ -264,8 +264,6 @@ h2,
 h4,
 h5,
 h6,
-ol,
-ul,
 dl,
 fieldset {
   margin: 0;
@@ -285,10 +283,6 @@ hr {
 
 hr {
   padding: 0; }
-
-ol,
-ul {
-  list-style: none; }
 
 a {
   color: #006dcc;
