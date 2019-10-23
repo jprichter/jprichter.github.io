@@ -85,33 +85,3 @@ For the TL;DR folks here's what you do:
   * SFDX: Create a Default Scratch Org
   * SFDX: Open Default Org
   * SFDX: Pull Source from Default Org
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

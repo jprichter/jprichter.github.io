@@ -7,6 +7,10 @@ layout: default
 
   <div class="slds-text-heading_small slds-p-vertical_medium">
     {{ content }}
+    <p>
+      Thoughts or comments? You should tell me about them on twitter. <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=jprichter&related=jprichter" rel="nofollow" target="_blank">Twitter</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </p>
   </div>
 
   <div class="slds-p-top_medium slds-p-bottom_xx-large date">Written on {{ page.date | date: "%B %e, %Y" }}</div>
